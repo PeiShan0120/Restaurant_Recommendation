@@ -56,7 +56,7 @@
 		    if (ask) {
 		        window.alert("Please complete the payment in 20 minutes.");
 		        window.open('Linepaypayment', '_blank');
-		       	window.open('deleteAllShop');
+		        window.location.href = "deleteAllShop";
 		    }
 		}
 		
