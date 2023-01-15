@@ -3,18 +3,36 @@
 <head>
 	<meta charset="UTF-8">
 	<title>footer</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Resto">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/brands.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    
+    
 	<script>
-	//alert payment confirm
-	function sendEmail() {
-		var email = document.getElementsByName('email');
-	    window.alert("We have recieved your email. Thanks for your contact, we will contact you ASAP!");
-	    document.getElementsByName('email') = email;
-	    window.location.href = "insertNewsletter";
-		}
 	
 	//disabled delete if no selected checkbox
-	function FunctionDisabled() {
-		if ($('#emailNewsletter).val() != ""){
+	function FunctionDisabled2() {
+		if ($('#emailNewsletter').val() != ""){
 			$("#sendEmail").prop("disabled", false);
         } else {
             $("#sendEmail").prop("disabled", true);
@@ -39,7 +57,7 @@
 		         			<i class="fab fa-github"></i>
 		         		</a>
 		                <a class="nav-link" href="https://qinsplanet1024.github.io/face_eat/">
-		                	<i class="fab fa-globe"></i>
+		                	<i class="fab fa-google"></i>
 		                </a>
 		            </nav>
          		</div>	
@@ -67,16 +85,13 @@
 	         		<p>Feel free to contact us if you have any questions! Enter your email, then we will respond to you ASAP!</p>
 	         		<form id="newsletter" action="insertNewsletter" method="post">
 						<div class="form-group">
-							<input type="email" onchange="FunctionDisabled()" class="form-control" name="email" id="emailNewsletter" aria-describedby="emailNewsletter" placeholder="Enter email">
+							<input type="email" onchange="FunctionDisabled2()" class="form-control" name="email" id="emailNewsletter" aria-describedby="emailNewsletter" placeholder="Enter email">
 						</div>
-						<button type="submit" onClick="sendEmail()" class="btn btn-primary w-100" id="sendEmail" disabled=true>Submit</button>
+						<button type="submit" class="btn btn-primary w-100" id="sendEmail" disabled="disabled">Submit</button>
 					</form>
          		</div>
          		
          	</div>
-         	<!-- <div class="col-md-12 d-flex align-items-center">
-         		<p class="mx-auto text-center mb-0">Copyright 2019. All Right Reserved. Design by <a href="https://gettemplates.co" target="_blank">GetTemplates</a></p>
-         	</div> -->
             
         </div>
     </div>

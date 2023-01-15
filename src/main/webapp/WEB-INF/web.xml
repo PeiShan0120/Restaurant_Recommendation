@@ -112,7 +112,6 @@
     <url-pattern>/updateShopMinus</url-pattern>
     <url-pattern>/insertTotalPrice</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>Employee</display-name>
@@ -122,6 +121,16 @@
   <servlet-mapping>
     <servlet-name>Employee</servlet-name>
     <url-pattern>/Employee</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NewsLetter</display-name>
+    <servlet-name>NewsLetter</servlet-name>
+    <servlet-class>net.javaguides.newslettermanagement.model.NewsLetter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewsLetter</servlet-name>
+    <url-pattern>/NewsLetter</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>

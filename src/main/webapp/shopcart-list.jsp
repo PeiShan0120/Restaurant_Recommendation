@@ -35,20 +35,24 @@
 		//alert payment confirm
 		function deleteItem(source) {
 			var checkboxes = document.getElementsByName('no');
-			
-		    var ask = window.confirm('Are you sure you want to delete?');
-		    if (ask) {
-		    	window.alert("Successfully deleted.");
-		    	for(var i=0, n=checkboxes.length; i<n; i++) {
-		    		checkboxes[i].checked = source.checked;
-		    		window.location.href = "deleteShop";
+			if (checkbox == 0){
+				window.alert("You didn't selected anything.");
+				window.location.href = "listShop";
+			}else{
+			    var ask = window.confirm('Are you sure you want to delete?');
+			    if (ask) {
+			    	window.alert("Successfully deleted.");
+			    	for(var i=0, n=checkboxes.length; i<n; i++) {
+			    		checkboxes[i].checked = source.checked;
+			    		window.location.href = "deleteShop";
+			    	}
 				}
 			}
 		}
 		
 		//alert payment confirm
 		function payment() {
-			var ask = window.confirm("Are you sure you want to ckekout?");
+			var ask = window.confirm("Are you sure you want to checkout?");
 		    if (ask) {
 		        window.alert("Please complete the payment in 20 minutes.");
 		        window.open('Linepaypayment', '_blank');

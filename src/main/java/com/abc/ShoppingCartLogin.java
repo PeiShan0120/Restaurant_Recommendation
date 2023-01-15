@@ -53,29 +53,34 @@ public class ShoppingCartLogin extends HttpServlet {
 		Employee uid=shoplogDAO.selectUserId(id);
 		List<ShopLog> utime=shoplogDAO.selectUserByDate(id);
 		
-		
+
 		try {
-			
 			//無學生編號則返回登入頁面(alert：請輸入正確格式ID編號)
-			if(id==0) {
-				response.sendRedirect("restaurantlog.html"); 
-				
+			if(id == 0) {
+				out.print("<script>alert('Please enter Student ID!')</script>");		
+				RequestDispatcher rd = request.getRequestDispatcher("restaurantlog.html");
+				rd.include(request, response);
 			}else {
 				//id不正確則返回登入頁面(alert：請輸入有效學生ID)
-				 if(id!=uid.getId()) {
-					 response.sendRedirect("restaurantlog.html");
+				 if(uid == null) {
+					 out.print("<script>alert('Student ID is invaild! If you have any questions, please contact us.')</script>");		
+					 RequestDispatcher rd = request.getRequestDispatcher("restaurantlog.html");
+					 rd.include(request, response);
 				 }
-				 
+
 				 //id存在且今日的time為10點前,成功登入且記得此用戶
-				 if(id==uid.getId() && utime.size()!=0 && utime.get(0).getTime().getHours()<10) {
-				
+				 if(id==uid.getId() && utime.size()!=0 && utime.get(0).getTime().getHours()<10) {	
 					ServletContext ctx=getServletContext();
 					//如果使用者不重複則成功登入,且寫入ServletContext
 					ctx.setAttribute("id", id);
 					response.sendRedirect("home.html");
 					out.close();
-				}else {
-					response.sendRedirect("restaurantlog.html");
+					
+				}else{
+					out.print("<script>alert('Student ID didn't clock-in yet!')</script>");		
+					RequestDispatcher rd = request.getRequestDispatcher("restaurantlog.html");
+					rd.include(request, response);
+//					response.sendRedirect("restaurantlog.html");
 				}
 			}
 		}catch(Exception e) {

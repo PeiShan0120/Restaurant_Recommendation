@@ -9,9 +9,12 @@ import net.javaguides.newslettermanagement.dao.NewsLetterDAO;
 import net.javaguides.newslettermanagement.model.NewsLetter;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.jasper.tagplugins.jstl.core.Out;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletContext;
@@ -47,9 +50,9 @@ public class NewsLetterServlet extends HttpServlet {
 	}
 	
 	
-	//insert & update Shopcart
+	//insert NewsLetter
 	private void insertNewsletter(HttpServletRequest request, HttpServletResponse response)   //新增指定欄位insert
-			throws SQLException, IOException {
+			throws SQLException, IOException, ServletException {
 		
 			String uemail = request.getParameter("email");
 			
@@ -58,6 +61,11 @@ public class NewsLetterServlet extends HttpServlet {
 			
 			NewsLetter newsletter = new NewsLetter(uid, uemail);
 			newsletterDAO.insertNewsletter(newsletter);
+			
+			PrintWriter out=response.getWriter();
+			out.print("<script>alert('We have recieved your email. Thanks for your contact, we will contact you soon!')</script>");
+			RequestDispatcher rd = request.getRequestDispatcher("home.html");
+			rd.include(request, response);
 		}
 
 }

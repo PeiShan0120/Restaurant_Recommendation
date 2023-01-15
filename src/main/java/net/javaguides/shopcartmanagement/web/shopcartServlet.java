@@ -188,23 +188,6 @@ public class shopcartServlet extends HttpServlet {
 		int uid = (int)ctx.getAttribute("id");
 		int uno = Integer.parseInt(request.getParameter("no"));
 		
-		//from DB
-		menu menu = menuDAO.selectItem(uno);
-		
-		int uquantity = shopcart.getQuantity();
-		int uprice = menu.getPrice() * uquantity;
-		
-		List<Shopcart> shopcartlist = shopcartDAO.selectAllShop(uid);
-		
-		
-		for(Shopcart price : shopcartlist) {
-			int uno = Integer.parseInt(request.getParameter("no"));
-		
-			ServletContext ctx = getServletContext(); 
-			int uid = (int)ctx.getAttribute("id");
-		
-		shopcartDAO.deleteShop(uid, uno);
 		}
-			
-	}
+		
 }

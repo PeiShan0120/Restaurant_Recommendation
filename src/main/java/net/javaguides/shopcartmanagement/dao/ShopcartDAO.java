@@ -37,7 +37,7 @@ public class ShopcartDAO {
 	//待修改
 	private static final String INSERT_SHOPCART_SQL = "INSERT INTO ShopCart (no, quantity, id) VALUES (?, ? , ?) ON DUPLICATE KEY UPDATE quantity = quantity+1";
 	private static final String UPDATE_TOTAL_PRICE = "UPDATE totalprice set totalprice = ? WHERE id = ?";
-	private static final String DELETE_ALL_SQL = "DELETE FROM ShopCart WHERE EXISTS (SELECT * FROM ShopCart WHERE id = ?)";
+	private static final String DELETE_ALL_SQL = "DELETE FROM ShopCart WHERE EXISTS (SELECT * FROM ShopCart WHERE id = ?) AND id = ?";
 	
 	public ShopcartDAO() {
 		menuDAO = new MenuDAO();
@@ -123,6 +123,7 @@ public class ShopcartDAO {
 		try (Connection connection = getConnection();
 			PreparedStatement preparedStatement = connection.prepareStatement(DELETE_ALL_SQL);) {
 			preparedStatement.setInt(1, id);
+			preparedStatement.setInt(2, id);
 			rowDeleted = preparedStatement.executeUpdate() > 0;  //刪除欄位
 		}
 		return rowDeleted;
