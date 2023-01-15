@@ -5,7 +5,7 @@
 
 <head>
 	<link rel="icon" type="image/x-icon" href="img/faceat.ico">
-	<%@ include file="topbar.html" %>
+	<%-- <%@ include file="topbar.html" %> --%>
 	
 </head>
 
@@ -77,6 +77,6 @@
 	</section>
 
 
-	<%@ include file="footer.html" %>
+	<%-- <%@ include file="footer.html" %> --%>
 </body>
 </html>

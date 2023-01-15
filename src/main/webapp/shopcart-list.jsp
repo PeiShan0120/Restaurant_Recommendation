@@ -63,18 +63,23 @@
 		//disabled delete if no selected checkbox
 		function FunctionDisabled() {
 			var hasChecked = false;
+			var checkboxes = document.getElementsByName('no');
+			var length = checkboxes.length;
 			if ($('#selectedCheckbox').is(':checked')) {
 				hasChecked = true;
 			} else {
-				var checkboxes = document.getElementsByName('no');
-				for(var i=0, n=checkboxes.length; i<n; i++) {
+				for(var i=0; i<length; i++) {
 					if (checkboxes[i].checked) {
 						hasChecked = true;
 						break;
 					}
 				}
 			}
+			if (length == 0) {
+				hasChecked = false;
+			}
 			$("#disabledDelete").prop("disabled", !hasChecked);
+			$("#disabledPay").prop("disabled", !hasChecked);
 		}
 		
 		//confirm delete
@@ -141,7 +146,7 @@
 			</table>
 			<div class="container text-right">
 				<a href="<%=request.getContextPath()%>/listItem" class="btn btn-primary w-20" >Add Item</a>
-				<input type="button" onClick="payment()" class="btn btn-primary w-20" style="right:200px" value="Pay">
+				<input type="button" onClick="payment()" id="disabledPay" disabled="disabled" class="btn btn-primary w-20" style="right:200px" value="Pay">
 			</div>
 		</div>
 	</div>

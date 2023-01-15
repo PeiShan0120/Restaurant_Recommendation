@@ -77,7 +77,7 @@ public class ShoppingCartLogin extends HttpServlet {
 					out.close();
 					
 				}else{
-					out.print("<script>alert('Student ID didn't clock-in yet!')</script>");		
+					out.print("<script>alert('Please clock-in first!')</script>");		
 					RequestDispatcher rd = request.getRequestDispatcher("restaurantlog.html");
 					rd.include(request, response);
 //					response.sendRedirect("restaurantlog.html");
