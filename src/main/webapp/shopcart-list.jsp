@@ -103,8 +103,9 @@
 				</thead>
 				<tbody>
 					<!--   for (Todo todo: todos) {  -->
+					<c:set var = "totalQuantity" value = "${0}" />
+					<c:set var = "totalPrice" value = "${0}" />
 					<c:forEach var="shopcart" items="${shopcartlist}">
-					
 						<tr>
 							<td><c:out value="${shopcart.no}"/></td>
 							<td><c:out value="${shopcart.item}" /></td>
@@ -114,13 +115,15 @@
 								<a href="updateShopMinus?no=<c:out value='${shopcart.no}'/>">-</a>
 							</td>
 							<td><c:out value="${shopcart.price}" /></td>
+							<c:set var = "totalQuantity" value = "${totalQuantity + shopcart.quantity}" />
+							<c:set var = "totalPrice" value = "${totalPrice + shopcart.price}" />
 							<td><input type="checkbox" onClick="toggle(this)" name="no" value="${shopcart.no}" onchange="FunctionDisabled()"></td>
 						</tr>
 					</c:forEach>
 					<tr>
 						<td colspan="2" style="text-align:center"><c:out value="TOTAL PRICE"/></td>
-						<td style="text-align:center"><c:out value="{shopcart.price}"/></td>
-						<td colspan="2" style="text-align:center"><c:out value="{shopcart.price}" /></td>
+						<td style="text-align:center"><c:out value="${totalQuantity}"/></td>
+						<td colspan="2" style="text-align:center"><c:out value="${totalPrice}" /></td>
 						
 					</tr>
 				</tbody>
