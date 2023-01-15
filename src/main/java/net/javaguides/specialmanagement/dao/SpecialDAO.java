@@ -46,60 +46,60 @@ public class SpecialDAO {
 	}
 	
 	//選no
-		public menu selectItem(int no) {
-			menu menu = null;
-			// Step 1: Establishing a Connection
-			try (Connection connection = getConnection();
-					// Step 2:Create a statement using connection object
-					// "select id,name,email,country from users where id =?"
-				PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ITEM_BY_NO_ITEM);) {
-				preparedStatement.setInt(1, no);
-				System.out.println(preparedStatement);
-				// Step 3: Execute the query or update query
-				ResultSet rs = preparedStatement.executeQuery();
+//		public menu selectItem(int no) {
+//			menu menu = null;
+//			// Step 1: Establishing a Connection
+//			try (Connection connection = getConnection();
+//					// Step 2:Create a statement using connection object
+//					// "select id,name,email,country from users where id =?"
+//				PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ITEM_BY_NO_ITEM);) {
+//				preparedStatement.setInt(1, no);
+//				System.out.println(preparedStatement);
+//				// Step 3: Execute the query or update query
+//				ResultSet rs = preparedStatement.executeQuery();
+//
+//				// Step 4: Process the ResultSet object.
+//				while (rs.next()) {
+//					String item = rs.getString("item");
+//					int quantity = rs.getInt("quantity");
+//					String price = rs.getString("price");
+//					String image = rs.getString("image");
+//					menu = new menu(no, item, quantity, price, image);  //查詢資料庫中的欄位，指定id編號
+//				}
+//			} catch (SQLException e) {
+//				printSQLException(e);
+//			}
+//			return menu;
+//		}
 
-				// Step 4: Process the ResultSet object.
-				while (rs.next()) {
-					String item = rs.getString("item");
-					int quantity = rs.getInt("quantity");
-					String price = rs.getString("price");
-					String image = rs.getString("image");
-					menu = new menu(no, item, quantity, price, image);  //查詢資料庫中的欄位，指定id編號
-				}
-			} catch (SQLException e) {
-				printSQLException(e);
-			}
-			return menu;
-		}
-
-	public List<menu> selectAllItem() {
-
-		// using try-with-resources to avoid closing resources (boiler plate code)
-		List<menu> menulist = new ArrayList<>();
-		// Step 1: Establishing a Connection
-		try (Connection connection = getConnection();
-
-			// Step 2:Create a statement using connection object
-			// "select * from users"
-			PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_ITEM);) {
-			System.out.println(preparedStatement);
-			// Step 3: Execute the query or update query
-			ResultSet rs = preparedStatement.executeQuery();
-
-			// Step 4: Process the ResultSet object.
-			while (rs.next()) {
-				int no = rs.getInt("no");
-				String item = rs.getString("item");
-				int quantity = rs.getInt("quantity");
-				String price = rs.getString("price");
-				String image = rs.getString("image");
-				menulist.add(new menu(no, item, quantity, price, image)); //查詢資料庫中的欄位，所有欄位
-			}
-		} catch (SQLException e) {
-			printSQLException(e);
-		}
-		return menulist;
-	}
+//	public List<menu> selectAllItem() {
+//
+//		// using try-with-resources to avoid closing resources (boiler plate code)
+//		List<menu> menulist = new ArrayList<>();
+//		// Step 1: Establishing a Connection
+//		try (Connection connection = getConnection();
+//
+//			// Step 2:Create a statement using connection object
+//			// "select * from users"
+//			PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_ITEM);) {
+//			System.out.println(preparedStatement);
+//			// Step 3: Execute the query or update query
+//			ResultSet rs = preparedStatement.executeQuery();
+//
+//			// Step 4: Process the ResultSet object.
+//			while (rs.next()) {
+//				int no = rs.getInt("no");
+//				String item = rs.getString("item");
+//				int quantity = rs.getInt("quantity");
+//				String price = rs.getString("price");
+//				String image = rs.getString("image");
+//				menulist.add(new menu(no, item, quantity, price, image)); //查詢資料庫中的欄位，所有欄位
+//			}
+//		} catch (SQLException e) {
+//			printSQLException(e);
+//		}
+//		return menulist;
+//	}
 
 	private void printSQLException(SQLException ex) {
 		for (Throwable e : ex) {

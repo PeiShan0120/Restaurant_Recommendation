@@ -57,7 +57,7 @@
 	                <c:forEach var="menu" items="${menulist}" begin="0" end="2">
 	                    <div class="menus d-flex align-items-center">
 	                        <div class="menu-img rounded-circle">
-	                            <img class="img-fluid" src="${menu.image}" alt="mealimg/alt.jpg">
+	                            <img class="img-fluid" src="${menu.image}" alt="wait">
 	                        </div>
 	                        <div class="text-wrap">
 	                            <div class="row align-items-start">
@@ -78,7 +78,7 @@
 	            	<c:forEach var="menu" items="${menulist}" begin="3" end="5">
 	                    <div class="menus d-flex align-items-center">
 	                        <div class="menu-img rounded-circle">
-	                            <img class="img-fluid" src="${menu.image}" alt="mealimg/alt.jpg">
+	                            <img class="img-fluid" src="${menu.image}" alt="wait">
 	                        </div>
 	                        <div class="text-wrap">
 	                            <div class="row align-items-start">
@@ -99,7 +99,7 @@
 	            	<c:forEach var="menu" items="${menulist}" begin="6" end="8">
 	                    <div class="menus d-flex align-items-center">
 	                        <div class="menu-img rounded-circle">
-	                            <img class="img-fluid" src="${menu.image}" alt="mealimg/alt.jpg">
+	                            <img class="img-fluid" src="${menu.image}" alt="mwait">
 	                        </div>
 	                        <div class="text-wrap">
 	                            <div class="row align-items-start">
@@ -153,7 +153,7 @@
 	                <c:forEach var="menu" items="${menulist}" begin="9" end="11">
 	                    <div class="menus d-flex align-items-center">
 	                        <div class="menu-img rounded-circle">
-	                            <img class="img-fluid" src="${menu.image}" alt="mealimg/alt.jpg">
+	                            <img class="img-fluid" src="${menu.image}" alt="wait">
 	                        </div>
 	                        <div class="text-wrap">
 	                            <div class="row align-items-start">
@@ -174,7 +174,7 @@
 	            	<c:forEach var="menu" items="${menulist}" begin="12" end="14">
 	                    <div class="menus d-flex align-items-center">
 	                        <div class="menu-img rounded-circle">
-	                            <img class="img-fluid" src="${menu.image}" alt="mealimg/alt.jpg">
+	                            <img class="img-fluid" src="${menu.image}" alt="wait">
 	                        </div>
 	                        <div class="text-wrap">
 	                            <div class="row align-items-start">
@@ -195,7 +195,7 @@
 	            	<c:forEach var="menu" items="${menulist}" begin="15" end="17">
 	                    <div class="menus d-flex align-items-center">
 	                        <div class="menu-img rounded-circle">
-	                            <img class="img-fluid" src="${menu.image}" alt="mealimg/alt.jpg">
+	                            <img class="img-fluid" src="${menu.image}" alt="wait">
 	                        </div>
 	                        <div class="text-wrap">
 	                            <div class="row align-items-start">
@@ -250,7 +250,7 @@
 	                <c:forEach var="menu" items="${menulist}" begin="18" end="20">
 	                    <div class="menus d-flex align-items-center">
 	                        <div class="menu-img rounded-circle">
-	                            <img class="img-fluid" src="${menu.image}" alt="mealimg/alt.jpg">
+	                            <img class="img-fluid" src="${menu.image}" alt="wait">
 	                        </div>
 	                        <div class="text-wrap">
 	                            <div class="row align-items-start">
@@ -271,7 +271,7 @@
 	            	<c:forEach var="menu" items="${menulist}" begin="21" end="23">
 	                    <div class="menus d-flex align-items-center">
 	                        <div class="menu-img rounded-circle">
-	                            <img class="img-fluid" src="${menu.image}" alt="mealimg/alt.jpg">
+	                            <img class="img-fluid" src="${menu.image}" alt="wait">
 	                        </div>
 	                        <div class="text-wrap">
 	                            <div class="row align-items-start">
@@ -292,7 +292,7 @@
 	            	<c:forEach var="menu" items="${menulist}" begin="24" end="26">
 	                    <div class="menus d-flex align-items-center">
 	                        <div class="menu-img rounded-circle">
-	                            <img class="img-fluid" src="${menu.image}" alt="mealimg/alt.jpg">
+	                            <img class="img-fluid" src="${menu.image}" alt="wait">
 	                        </div>
 	                        <div class="text-wrap">
 	                            <div class="row align-items-start">
