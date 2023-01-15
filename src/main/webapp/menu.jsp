@@ -6,6 +6,28 @@
 <head>
 	<link rel="icon" type="image/x-icon" href="img/faceat.ico">
 	<%@ include file="topbar.html" %>
+
+	<script>
+		//disabled delete if no selected checkbox
+		function FunctionDisabled() {
+			var hasChecked = false;
+			var checkboxes = document.getElementsByName('item');
+			var length = checkboxes.length;
+			for(var i=0; i<length; i++) {
+				if (checkboxes[i].checked) {
+					hasChecked = true;
+					break;
+				}
+			}
+			if (length == 0) {
+				hasChecked = false;
+			}
+			var addbutton = document.getElementsByName('add');
+			for(var i=0;i < addbutton.length; i++){
+				addbutton[i].disabled = !hasChecked;
+			}
+		}
+	</script>
 	
 </head>
 
@@ -44,7 +66,7 @@
 	                                </div>
 	                                <div class="col-4">
 	                                    <h4 class="text-muted menu-price">${menu.price}</h4>
-	                                   	<input type="checkbox" name="item" value="${menu.no}">
+	                                   	<input type="checkbox" name="item"  onchange="FunctionDisabled()" value="${menu.no}">
 	                                </div>
 	                            </div>
 	                        </div>
@@ -65,7 +87,7 @@
 	                                </div>
 	                                <div class="col-4">
 	                                    <h4 class="text-muted menu-price">${menu.price}</h4>
-	                                    <input type="checkbox" name="item" value="${menu.no}">
+	                                    <input type="checkbox" name="item"  onchange="FunctionDisabled()" value="${menu.no}">
 	                                </div>
 	                            </div>
 	                        </div>
@@ -86,7 +108,7 @@
 	                                </div>
 	                                <div class="col-4">
 	                                    <h4 class="text-muted menu-price">${menu.price}</h4>
-	                                    <input type="checkbox" name="item" value="${menu.no}">
+	                                    <input type="checkbox" name="item"  onchange="FunctionDisabled()" value="${menu.no}">
 	                                </div>
 	                            </div>
 	                        </div>
@@ -99,7 +121,7 @@
 	                <div class="col-md-12">
 	                    <div class="heading-section text-center">
 		                    <a>
-		                        <button type="submit" class="btn btn-primary w-20">Add</button>
+		                        <button type="submit" name="add" class="btn btn-primary w-20" disabled="disabled">Add</button>
 		                    </a>
 	                    </div>  
 	                </div>
@@ -140,7 +162,7 @@
 	                                </div>
 	                                <div class="col-4">
 	                                    <h4 class="text-muted menu-price">${menu.price}</h4>
-	                                   	<input type="checkbox" name="item" value="${menu.no}">
+	                                   	<input type="checkbox" name="item"  onchange="FunctionDisabled()" value="${menu.no}">
 	                                </div>
 	                            </div>
 	                        </div>
@@ -161,7 +183,7 @@
 	                                </div>
 	                                <div class="col-4">
 	                                    <h4 class="text-muted menu-price">${menu.price}</h4>
-	                                    <input type="checkbox" name="item" value="${menu.no}">
+	                                    <input type="checkbox" name="item" onchange="FunctionDisabled()" value="${menu.no}">
 	                                </div>
 	                            </div>
 	                        </div>
@@ -182,7 +204,7 @@
 	                                </div>
 	                                <div class="col-4">
 	                                    <h4 class="text-muted menu-price">${menu.price}</h4>
-	                                    <input type="checkbox" name="item" value="${menu.no}">
+	                                    <input type="checkbox" name="item" onchange="FunctionDisabled()" value="${menu.no}">
 	                                </div>
 	                            </div>
 	                        </div>
@@ -196,7 +218,7 @@
 	                <div class="col-md-12">
 	                    <div class="heading-section text-center">
 		                    <a>
-		                        <button type="submit" class="btn btn-primary w-20">Add</button>
+		                        <button type="submit"  name="add" class="btn btn-primary w-20" disabled="disabled">Add</button>
 		                    </a>
 	                    </div>  
 	                </div>
@@ -237,7 +259,7 @@
 	                                </div>
 	                                <div class="col-4">
 	                                    <h4 class="text-muted menu-price">${menu.price}</h4>
-	                                   	<input type="checkbox" name="item" value="${menu.no}">
+	                                   	<input type="checkbox" name="item"  onchange="FunctionDisabled()" value="${menu.no}">
 	                                </div>
 	                            </div>
 	                        </div>
@@ -258,7 +280,7 @@
 	                                </div>
 	                                <div class="col-4">
 	                                    <h4 class="text-muted menu-price">${menu.price}</h4>
-	                                    <input type="checkbox" name="item" value="${menu.no}">
+	                                    <input type="checkbox" name="item"  onchange="FunctionDisabled()" value="${menu.no}">
 	                                </div>
 	                            </div>
 	                        </div>
@@ -279,7 +301,7 @@
 	                                </div>
 	                                <div class="col-4">
 	                                    <h4 class="text-muted menu-price">${menu.price}</h4>
-	                                    <input type="checkbox" name="item" value="${menu.no}">
+	                                    <input type="checkbox" name="item"  onchange="FunctionDisabled()" value="${menu.no}">
 	                                </div>
 	                            </div>
 	                        </div>
@@ -293,7 +315,7 @@
 	                <div class="col-md-12">
 	                    <div class="heading-section text-center">
 		                    <a>
-		                        <button type="submit" class="btn btn-primary w-20">Add</button>
+		                        <button type="submit"  name="add" class="btn btn-primary w-20" disabled="disabled">Add</button>
 		                    </a>
 	                    </div>  
 	                </div>
