@@ -8,11 +8,28 @@
 	
 	<script>
 		//select all checkbox in one time
+		function toggleAll(source) {
+			var checkboxes = document.getElementsByName('no');
+			for(var i=0, n=checkboxes.length; i<n; i++) {
+				checkboxes[i].checked = source.checked;
+			}
+		}
+		
+		//select one checkbox and changed all selected checkbox
 		function toggle(source) {
-		  var checkboxes = document.getElementsByName('no');
-		  for(var i=0, n=checkboxes.length; i<n; i++) {
-		    checkboxes[i].checked = source.checked;
-		  }
+			var allChecked = true;
+			if (source.checked) {
+				var checkboxes = document.getElementsByName('no');
+				for(var i=0, n=checkboxes.length; i<n; i++) {
+					if (!checkboxes[i].checked) {
+						allChecked = false;
+						break;
+					}
+				}
+			} else {
+				allChecked = false;
+			}
+			$('#selectedCheckbox').prop('checked', allChecked);
 		}
 		
 		//alert payment confirm
@@ -41,11 +58,19 @@
 		
 		//disabled delete if no selected checkbox
 		function FunctionDisabled() {
-			if ($('#selectedCheckbox).is(':checked')){
-                $("#disabledDelete").prop("disabled", false);
-            } else {
-                $("#disabledDelete").prop("disabled", true);
-            }
+			var hasChecked = false;
+			if ($('#selectedCheckbox').is(':checked')) {
+				hasChecked = true;
+			} else {
+				var checkboxes = document.getElementsByName('no');
+				for(var i=0, n=checkboxes.length; i<n; i++) {
+					if (checkboxes[i].checked) {
+						hasChecked = true;
+						break;
+					}
+				}
+			}
+			$("#disabledDelete").prop("disabled", !hasChecked);
 		}
 		
     </script>
@@ -63,7 +88,7 @@
 			<hr>
 			<div class="container text-left">
 				<!-- <button type="submit" class="btn btn-primary w-20" onClick="deleteItem(source)">Remove Item</button> -->
-				<input type="submit" class="btn btn-primary w-20" value="Remove Item" id="disabledDelete" disabled=true>
+				<input type="submit" class="btn btn-primary w-20" value="Remove Item" id="disabledDelete" disabled="disabled">
 			</div>
 			<br>
 			<table class="table table-bordered">
@@ -73,7 +98,7 @@
 						<th>Item</th>
 						<th>Quantity</th>
 						<th>Price</th>
-						<th><input type="checkbox" onClick="toggle(this)" id="selectedCheckbox" onchange="FunctionDisabled()"></th>
+						<th><input type="checkbox" onClick="toggleAll(this)" id="selectedCheckbox" onchange="FunctionDisabled()"></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -89,7 +114,7 @@
 								<a href="updateShopMinus?no=<c:out value='${shopcart.no}'/>">-</a>
 							</td>
 							<td><c:out value="${shopcart.price}" /></td>
-							<td><input type="checkbox" name="no" value="${shopcart.no}" id="selectedCheckbox" onchange="FunctionDisabled()"></td>
+							<td><input type="checkbox" onClick="toggle(this)" name="no" value="${shopcart.no}" onchange="FunctionDisabled()"></td>
 						</tr>
 					</c:forEach>
 					<tr>
