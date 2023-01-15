@@ -73,6 +73,12 @@
 			$("#disabledDelete").prop("disabled", !hasChecked);
 		}
 		
+		//confirm delete
+		function confirmDelete() {
+			var answer = confirm("Are you sure you want to delete ?");
+			return answer;
+		}
+		
     </script>
 	
 </head>
@@ -88,7 +94,7 @@
 			<hr>
 			<div class="container text-left">
 				<!-- <button type="submit" class="btn btn-primary w-20" onClick="deleteItem(source)">Remove Item</button> -->
-				<input type="submit" class="btn btn-primary w-20" value="Remove Item" id="disabledDelete" disabled="disabled">
+				<input type="submit" class="btn btn-primary w-20" value="Remove Item" id="disabledDelete" disabled="disabled" onclick="{return confirmDelete();}">
 			</div>
 			<br>
 			<table class="table table-bordered">
