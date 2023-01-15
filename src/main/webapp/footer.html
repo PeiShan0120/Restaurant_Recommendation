@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>footer</title>
+	<script>
+	//alert payment confirm
+	function sendEmail() {
+		var email = document.getElementsByName('email');
+	    window.alert("We have recieved your email. Thanks for your contact, we will contact you ASAP!");
+	    document.getElementsByName('email') = email;
+	    window.location.href = "insertNewsletter";
+		}
+	
+	//disabled delete if no selected checkbox
+	function FunctionDisabled() {
+		if ($('#emailNewsletter).val() != ""){
+			$("#sendEmail").prop("disabled", false);
+        } else {
+            $("#sendEmail").prop("disabled", true);
+        }
+	}
+	
+	</script>
+
+</head>
+<body>
+<!-- footer -->
+<footer class="mastfoot pb-5 bg-white section-padding pb-0" id="footerFix">
+    <div class="inner container">
+         <div class="row">
+         
+         	<div class="col-lg-4">
+         		<div class="footer-widget pr-lg-5 pr-0">
+         			<img src="img/FacEatlogo.png" class="img-fluid footer-logo mb-3" alt="">
+	         		<p>Order and get discount!<br>We provide a platform to students to order Lunch by themselves, which including recommendation system and payment system.</p>
+	         		<nav class="nav nav-mastfoot justify-content-start">
+		         		<a class="nav-link" href="https://github.com/LewisTsai/AIML01.git/">
+		         			<i class="fab fa-github"></i>
+		         		</a>
+		                <a class="nav-link" href="https://qinsplanet1024.github.io/face_eat/">
+		                	<i class="fab fa-globe"></i>
+		                </a>
+		            </nav>
+         		</div>	
+         	</div>
+         	
+         	<div class="col-lg-4">
+         		<div class="footer-widget px-lg-5 px-0">
+         			<h4>Open Hours</h4>
+	         		<ul class="list-unstyled open-hours">
+		                <li class="d-flex justify-content-between"><span>Monday</span><span>9:00 - 16:30</span></li>
+		                <li class="d-flex justify-content-between"><span>Tuesday</span><span>9:00 - 16:30</span></li>
+		                <li class="d-flex justify-content-between"><span>Wednesday</span><span>9:00 - 16:30</span></li>
+		                <li class="d-flex justify-content-between"><span>Thursday</span><span>9:00 - 16:30</span></li>
+		                <li class="d-flex justify-content-between"><span>Friday</span><span>9:00 - 16:30</span></li>
+		                <li class="d-flex justify-content-between"><span>Saturday</span><span>Closed</span></li>
+		                <li class="d-flex justify-content-between"><span>Sunday</span><span> Closed</span></li>
+		              </ul>
+         		</div>
+         		
+         	</div>
+
+         	<div class="col-lg-4">
+         		<div class="footer-widget pl-lg-5 pl-0">
+         			<h4>Newsletter</h4>
+	         		<p>Feel free to contact us if you have any questions! Enter your email, then we will respond to you ASAP!</p>
+	         		<form id="newsletter" action="insertNewsletter" method="post">
+						<div class="form-group">
+							<input type="email" onchange="FunctionDisabled()" class="form-control" name="email" id="emailNewsletter" aria-describedby="emailNewsletter" placeholder="Enter email">
+						</div>
+						<button type="submit" onClick="sendEmail()" class="btn btn-primary w-100" id="sendEmail" disabled=true>Submit</button>
+					</form>
+         		</div>
+         		
+         	</div>
+         	<!-- <div class="col-md-12 d-flex align-items-center">
+         		<p class="mx-auto text-center mb-0">Copyright 2019. All Right Reserved. Design by <a href="https://gettemplates.co" target="_blank">GetTemplates</a></p>
+         	</div> -->
+            
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

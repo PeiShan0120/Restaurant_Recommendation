@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>login by checktime</title>
+	<link rel="icon" type="image/x-icon" href="img/faceat.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+	<!--     Include css, topbar, and footer -->
+	<script> 
+    $(function(){
+      $("#topLog").load("topbarforlogin.html");
+    });
+    
+    $(function () {
+    	  $('[data-toggle="tooltip"]').tooltip()
+    	});
+    </script>
+</head>
+<body>
+	<div id="topLog"></div>
+	<section style="height:40vw ;background-image: url(img/together.jpg);background-repeat:no-repeat;background-size:cover;">
+	<br><br><br><br><br><br>
+	<form action="ShoppingCartLogin">
+		 <div class="container">
+	        <div class="row">
+	            <div class="col-lg-5">
+	                <div class=" bg-white p-5 shadow">
+	                    <div class="heading-section text-center">
+							<form method="post" action="restaurantlog.html" autocomplete="on">
+							    <div class="row">
+							        <div class="col-md-12 form-group">
+							            <input type="text" class="form-control" name="id" id="tooltip" placeholder="Student ID" class="tooltip">
+							            <span>Please enter valid Student ID.</span>
+							        </div>
+							        <div class="col-md-12 text-center">
+							            <input type="submit" class="btn btn-primary btn-shadow btn-lg" value="Login">
+							        </div>
+							    </div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</form>
+	</section>
+</body>
+</html>

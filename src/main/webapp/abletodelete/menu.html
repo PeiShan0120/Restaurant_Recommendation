@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="icon" type="image/x-icon" href="img/faceat.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script> 
+    $(function(){
+      $("#topMenu").load("topbar.html"); 
+      $("#footMenu").load("footer.html"); 
+    });
+    </script> 
+</head>
+
+<body>
+<form method="post" action="/updateShop" >
+	<div id="topMenu"></div>
+
+	<!-- Meal -->
+	<section id="gtco-menu" class="section-padding" id="meal">
+	    <div class="container">
+	        <div class="section-content">
+	        
+	            <div class="row mb-5">
+	                <div class="col-md-12">
+	                    <div class="heading-section text-center">
+	                    	<br><br>
+	                        <h2>
+	                            Meal
+	                        </h2>
+	                    </div>  
+	                </div>
+	            </div>
+	            
+	            <div class="row">
+	                <div class="col-lg-4 menu-wrap">
+	                
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Mackerel and Pork Chop Meal Box.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Mackerel and Pork Chop Meal Box</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$120</h4>
+	                                    <input type="checkbox" name="item" value="Mackerel and Pork Chop Meal Box">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Chicken Karaage and Pork Chop Meal Box.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Chicken Karaage and Pork Chop Meal Box</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$130</h4>
+	                                    <input type="checkbox" name="item" value="Chicken Karaage and Pork Chop Meal Box">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Selected Grilled Mackerel Meal Box.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Selected Grilled Mackerel Meal Box</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$110</h4>
+	                                    <input type="checkbox" name="item" value="Selected Grilled Mackerel Meal Box">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	
+	                <div class="col-lg-4 menu-wrap">
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Selected Grilled Chicken Drumstick Meal Box.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Selected Grilled Chicken Drumstick Meal Box</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$110</h4>
+	                                    <input type="checkbox" name="item" value="Selected Grilled Chicken Drumstick Meal Box">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Deep-Fried Pork Chop Meal Box.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Deep-Fried Pork Chop Meal Box</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$120</h4>
+	                                    <input type="checkbox" name="item" value="Deep-Fried Pork Chop Meal Box">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Chicken in Creamy Whisky BBQ Sauce.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Chicken in Creamy Whisky BBQ Sauce</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$95</h4>
+	                                    <input type="checkbox" name="item" value="Chicken in Creamy Whisky BBQ Sauce">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	
+	                <div class="col-lg-4 menu-wrap">
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Signature Hao Wu Braised Beef.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Signature Hao Wu Braised Beef</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$90</h4>
+	                                    <input type="checkbox" name="item" value="Signature Hao Wu Braised Beef">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Lemon Parmesan Chicken with Arugula.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Lemon Parmesan Chicken with Arugula</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$110</h4>
+	                                    <input type="checkbox" name="item" value="Lemon Parmesan Chicken with Arugula">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <!-- <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Caesar Salad with Grilled Chicken.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Caesar Salad with Grilled Chicken</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$100</h4>
+	                                    <input type="checkbox" name="meal" value="Caesar Salad with Grilled Chicken">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div> -->
+	                    
+	                    <!-- 10 -->
+	                     <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Spicy Thai Chicken Noodle.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Spicy Thai Chicken Noodle</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$150</h4>
+	                                    <input type="checkbox" name="item" value="Spicy Thai Chicken Noodle">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    
+	                </div>
+	            </div>
+	            
+	            <div class="row mb-5">
+	                <div class="col-md-12">
+	                    <div class="heading-section text-center">
+		                    <a href="insertItem">
+		                        <button type="submit" class="btn btn-primary w-20">Add</button>
+		                    </a>
+	                    </div>  
+	                </div>
+	            </div>
+	            
+	        </div>
+	    </div>
+	</section>
+	
+	<!-- Beverage -->
+	<section id="gtco-menu" class="section-padding" id="beverage">
+	    <div class="container">
+	        <div class="section-content">
+	        
+	            <div class="row mb-5">
+	                <div class="col-md-12">
+	                    <div class="heading-section text-center">
+	                    	<br><br>
+	                        <h2>
+	                            Beverage
+	                        </h2>
+	                    </div>  
+	                </div>
+	            </div>
+	            
+	            <div class="row">
+	                <div class="col-lg-4 menu-wrap">
+ 
+	                    <!-- items -->
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Grapefruit Yakult Tea.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Grapefruit Yakult Tea</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$55</h4>
+	                                    <input type="checkbox" name="item" value="Grapefruit Yakult Tea">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Grapefruit Honey Tea.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Grapefruit Honey Tea</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$65</h4>
+	                                    <input type="checkbox" name="item" value="Grapefruit Honey Tea">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Alpine Jinxuan Tea.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Alpine Jinxuan Tea</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$70</h4>
+	                                    <input type="checkbox" name="item" value="Alpine Jinxuan Tea">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	
+	                <div class="col-lg-4 menu-wrap">
+	                
+	                   
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Kiwi Fruit Green Tea.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Kiwi Fruit Green Tea</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$70</h4>
+	                                    <input type="checkbox" name="item" value="Kiwi Fruit Green Tea">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Orange and Passion Fruit Green Tea.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Orange and Passion Fruit Green Tea</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$55</h4>
+	                                    <input type="checkbox" name="item" value="Orange and Passion Fruit Green Tea">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Bubble Black Tea Latte.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Bubble Black Tea Latte</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$50</h4>
+	                                    <input type="checkbox" name="item" value="Bubble Black Tea Latte">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	
+	                <div class="col-lg-4 menu-wrap">
+	                    
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Grapefruit Green Tea.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Grapefruit Green Tea</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$60</h4>
+	                                    <input type="checkbox" name="item" value="Grapefruit Green Tea">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Passion Fruit Yakult Tea.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Passion Fruit Yakult Tea</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$65</h4>
+	                                     <input type="checkbox" name="item" value="Passion Fruit Yakult Tea">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                   <!--  <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Lemon Black Tea.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Lemon Black Tea</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$70</h4>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div> -->
+	                    <!-- 10 -->
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Lemon Juice.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Lemon Juice</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$75</h4>
+	                                    <input type="checkbox" name="item" value="Lemon Juice">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    
+	                </div>
+	            </div>
+	            
+				<div class="row mb-5">
+	                <div class="col-md-12">
+	                    <div class="heading-section text-center">
+	                    	<a href="insertItem">
+	                        	<button type="submit" class="btn btn-primary w-20">Add</button>
+	                        </a>
+	                    </div>  
+	                </div>
+	            </div>
+	            
+	        </div>
+	    </div>
+	</section>
+	
+	
+	
+	<!-- Dessert -->
+	<section id="gtco-menu" class="section-padding" id ="dessert">
+	    <div class="container">
+	        <div class="section-content">
+	        
+	            <div class="row mb-5">
+	                <div class="col-md-12">
+	                    <div class="heading-section text-center">
+	                    	<br><br>
+	                        <h2>
+	                            Dessert
+	                        </h2>
+	                    </div>  
+	                </div>
+	            </div>
+	            
+	            <div class="row">
+	                <div class="col-lg-4 menu-wrap">
+	                    
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Apple Pie Pound Cake.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Apple Pound Cake</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$120</h4>
+	                                    <input type="checkbox" name="item" value="Apple Pound Cake">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Grapefruit Poundcake.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Grapefruit Pound Cake</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$110</h4>
+	                                    <input type="checkbox" name="item" value="Grapefruit Pound Cake">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Chocolate Pound Cake.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Chocolate Pound Cake</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$105</h4>
+	                                    <input type="checkbox" name="item" value="Chocolate Pound Cake">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	
+	                <div class="col-lg-4 menu-wrap">
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Madeleine.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Madeleine</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$95</h4>
+	                                    <input type="checkbox" name="item" value="Madeleine">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Chocolate Madeleine.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Chocolate Madeleine</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$100</h4>
+	                                    <input type="checkbox" name="item" value="Chocolate Madeleine">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Cheesecake.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Cheesecake</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$105</h4>
+	                                    <input type="checkbox" name="item" value="Cheesecake">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	
+	                <div class="col-lg-4 menu-wrap">
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Blueberry Cheesecake.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Blueberry Cheesecake</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$95</h4>
+	                                    <input type="checkbox" name="item" value="Blueberry Cheesecake">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Matcha Cheesecake.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Matcha Cheesecake</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$105</h4>
+	                                    <input type="checkbox" name="item" value="Matcha Cheesecake">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <!-- <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/Apple Pie.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Apple Pie</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$130</h4>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div> -->
+	                    
+	                    <!-- 10 -->
+	                    <div class="menus d-flex align-items-center">
+	                        <div class="menu-img rounded-circle">
+	                            <img class="img-fluid" src="mealimg/blueberry pie.jpg" alt="">
+	                        </div>
+	                        <div class="text-wrap">
+	                            <div class="row align-items-start">
+	                                <div class="col-8">
+	                                    <h4>Blueberry Pie</h4>
+	                                </div>
+	                                <div class="col-4">
+	                                    <h4 class="text-muted menu-price">$120</h4>
+	                                    <input type="checkbox" name="item" value="Blueberry Pie">
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+                    </div>
+                </div> 
+                    
+	            
+	            <div class="row mb-5">
+	                <div class="col-md-12">
+	                    <div class="heading-section text-center">
+	                    	<a href="insertItem">
+	                        	<button type="submit" class="btn btn-primary w-20">Add</button>
+	                        </a>
+	                    </div>  
+	                </div>
+	            </div>
+	            
+	    	</div>
+		</div>
+	</section>
+</form>
+
+<div id="footMenu"></div>
+
+</body>
+</html>

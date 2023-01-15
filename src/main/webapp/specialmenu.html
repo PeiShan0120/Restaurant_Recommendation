@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="icon" type="image/x-icon" href="img/faceat.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script> 
+    $(function(){
+      $("#topSpecial").load("topbar.html"); 
+      $("#footSpecial").load("footer.html"); 
+    });
+    </script> 
+</head>
+
+<body>
+	<div id="topSpecial"></div>
+
+	<!-- recommendation meal -->
+	<section id="gtco-special-dishes" class="bg-grey section-padding">
+	    <div class="container">
+	        <div class="section-content">
+	            <div class="heading-section text-center">
+	                <br><br>
+	                <h2>
+	                    Special Meals 
+	                </h2>
+	            </div>
+	            <div class="row mt-5">
+	                <div class="col-lg-5 col-md-6 align-self-center py-5">
+	                    <h2 class="special-number">01.</h2>
+	                    <div class="dishes-text">
+	                        <h3><span>On Sale<br>Just $80 Today Only!</span><br>Deep-Fried Pork Chop Meal Box</h3>
+	                        <p class="pt-3">Get 33% Discount! <br>Cheaper than you think!</p>
+	                        <p class="pt-3" style="color:red"><b>Original price : $120</b></p>
+	                        <h3 class="special-dishes-price">$80</h3>
+	                        
+	                        <a href="listItem" class="btn-primary mt-3">More</a>
+	                        
+	                    </div>
+	                </div>
+	                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+	                    <img src="mealimg/Deep-Fried Pork Chop Meal Box.jpg" alt="" class="img-fluid shadow w-100">
+	                </div>
+	            </div>
+	            
+	             <div class="row mt-5">
+	                <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
+	                    <img src="mealimg/bestcombo.jpg" alt="" class="img-fluid shadow w-100">
+	                </div>
+	                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2 py-5">
+	                    <h2 class="special-number">02.</h2>
+	                    <div class="dishes-text">
+	                        <h3><span>Best Choice</span><br>A Combo Meal</h3>
+	                        
+	                        <form action="listItem" method="post">
+		                        <p class="pt-3">
+		                        <input type="hidden" name="item" value="Signature Hao Wu Braised Beef">
+ 								<label >Meal: Signature Hao Wu Braised Beef</label><br>
+ 								<input type="hidden" name="item" value="Alpine Jinxuan Tea">
+ 								<label>Beverage: Alpine Jinxuan Tea</label><br>
+ 								<input type="hidden" name="item" value="Chocolate Madeleine">
+ 								<label> Dessert: Chocolate Madeleine</label><br>
+		                        Meal: Signature Hao Wu Braised Beef<br>
+		                        Beverage: Alpine Jinxuan Tea<br>
+		                        Dessert: Chocolate Madeleine</p>
+		                        <h3 class="special-dishes-price">
+		                        <input type="hidden" name="price" value="$260">
+ 								<label> <br>$260</h3>
+ 							</form>
+ 							
+		                        <a href="listItem" class="btn-primary mt-3">More<span><i class="fa fa-long-arrow-right"></i></span></a>
+	                        
+	                    </div>
+	                </div>
+	            </div>
+	            
+	            <div class="row mt-5">
+	                <div class="col-lg-5 col-md-6 align-self-center py-5">
+	                    <h2 class="special-number">03.</h2>
+	                    <div class="dishes-text">
+	                    	<h3><span>Afternoon Tea</span><br> A Tea Combo</h3>
+	                    	<p class="pt-3">
+	                        Beverage: Orange and Passion Fruit Green Tea<br>
+	                        Dessert: Matcha Cheeseckae</p>
+	                        <h3 class="special-dishes-price">$160</h3>
+	                        
+	                        <a href="listItem" class="btn-primary mt-3">More</a>
+	                        
+	                    </div>
+	                </div>
+	                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+	                    <img src="mealimg/teacombo.jpg" alt="" class="img-fluid shadow w-100">
+	                </div>
+	            </div>
+     
+	        </div>
+	    </div>
+	</section>
+	
+
+<div id="footSpecial"></div>
+</body>
+</html>
